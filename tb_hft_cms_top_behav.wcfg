@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_hft_cms_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="h3_matrix_pkg" />
+            <top_module name="tb_hft_cms_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="153.153 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="210"></NameColumnWidth>
+      <ValueColumnWidth column_width="174"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/tb_hft_cms_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/key_in" type="array">
+      <obj_property name="ElementShortName">key_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">key_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/activity_in" type="array">
+      <obj_property name="ElementShortName">activity_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">activity_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/valid_in" type="logic">
+      <obj_property name="ElementShortName">valid_in</obj_property>
+      <obj_property name="ObjectShortName">valid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/threshold" type="array">
+      <obj_property name="ElementShortName">threshold[31:0]</obj_property>
+      <obj_property name="ObjectShortName">threshold[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/read_addr" type="array">
+      <obj_property name="ElementShortName">read_addr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">read_addr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/read_key_out" type="array">
+      <obj_property name="ElementShortName">read_key_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_key_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/read_count_out" type="array">
+      <obj_property name="ElementShortName">read_count_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_count_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/CLK_PERIOD" type="other">
+      <obj_property name="ElementShortName">CLK_PERIOD</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/uut/hh_logger_inst/is_heavy_hitter" type="logic">
+      <obj_property name="ElementShortName">is_heavy_hitter</obj_property>
+      <obj_property name="ObjectShortName">is_heavy_hitter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/uut/hh_detector_inst/is_heavy_hitter" type="logic">
+      <obj_property name="ElementShortName">is_heavy_hitter</obj_property>
+      <obj_property name="ObjectShortName">is_heavy_hitter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_hft_cms_top/uut/hh_detector_inst/count_row_1" type="array">
+      <obj_property name="ElementShortName">count_row_1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count_row_1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

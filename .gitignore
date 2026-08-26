@@ -1,0 +1,25 @@
+# Vivado Logs and Journals
+*.jou
+*.log
+*.str
+*.dmp
+
+# Vivado Generated Directories
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Coregen / IP Log files
+coregen.cgp
+coregen.cgc
+coregen.log
+tmp.txt
+coregen.xml
+custom_behavioral_sim_glbl.v
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

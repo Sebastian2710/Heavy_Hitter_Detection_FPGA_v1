@@ -1,0 +1,28 @@
+voi primi ca input o adresa calculata de un hash function (bazat pe pret) si volumul (nr de shares)
+outputul e noul count pt adresa primita, disponibila dupa 1 cc datorita fwd.
+
+se desfasoara in 3 cc (stage uri) :
+1. citesc adresa primita ca input si o scriu in bram
+2. fac suma dintre valoarea stocata in bram si volumul primit ca input
+3. scriu noua valoare inapoi in bram la adresa corecta
+
+avem 2 hazard-uri :
+1. RAW intre stage 1 si 3 - valoarea pe care o voi citi din bram la pasul urmator va fi veche, motiv pt care
+trebuie sa folosesc direct noua suma calculata, in loc sa citesc din bram in stage 2
+						
+ex (count initial 0) : (50,20) (60,x) (50,5) -> cc=1 dia= x, addra= x, addrb=50, dob= x, sum=x
+						cc=2 dia= x, addra= x, addrb=60, dob= 0, sum=5
+						cc=3 dia= 5, addra=50, addrb=50, dob= x, sum=x
+						cc=4 dia= x, addra=60, addrb= x, dob= 0, sum=25	
+(aici am nevoie de fwd, pt ca din bram citesc 0, dar in cc=5 pt addr=50 dob=5, nu 0 ) -> folosesc suma calculata in cc-2
+
+2. RAW intre stage 2 si 3 - pt 2 adrese egale consecutive, nu apuc sa scriu in bram noua valoare, trebuie sa ii dau fwd la suma calculata si sa o folosesc direct pt noua suma
+
+ex (count initial 0) : (50,20) (50,5)-> cc=1 dia= x, addra= x, addrb=50, dob= x, sum=x
+					cc=2 dia= x, addra= x, addrb=50, dob= 0, sum=5
+					cc=3 dia= 5, addra=50, addrb= x, dob= 0, sum=5
+(aici am nevoie de fwd, pt ca din bram citesc 0, dar in cc=4 pt addr=50 dob=5, nu 0 ) -> folosesc suma calculata in cc-1
+
+
+
+
